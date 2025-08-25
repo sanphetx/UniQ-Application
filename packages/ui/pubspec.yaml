@@ -1,0 +1,50 @@
+name: ui
+description: "UI package for Flutter application"
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.8.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  another_flushbar: ^1.12.30
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.9.3
+  remixicon: ^1.4.1
+  flutter_gen: ^5.10.0
+  flutter_bloc: ^9.1.1
+  flutter_form_builder: ^10.1.0
+  form_builder_validators: ^11.2.0
+  intl_utils: ^2.8.8
+  core:
+    git:
+      url: https://gitlab.leapsolutions.co.th/astral-plane/packages/shared
+      ref: main
+
+dev_dependencies:
+  flutter_gen_runner: ^5.10.0
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: LineSeedSansTH
+      fonts:
+        - asset: ./assets/fonts/LINESeedSansTH_A_Rg.ttf
+          weight: 400
+        - asset: ./assets/fonts/LINESeedSansTH_A_Bd.ttf
+          weight: 500
+
+flutter_gen:
+  output: ./lib/src/generated
+
+flutter_intl:
+  enabled: true
+  main_locale: th
+  class_name: UILocalizations
+  arb_dir: lib/src/localization
+  output_dir: lib/src/generated
