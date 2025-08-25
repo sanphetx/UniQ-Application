@@ -1,9 +1,0 @@
-[submodule "packages/auth"]
-	path = packages/auth
-	url = https://gitlab.leapsolutions.co.th/astral-plane/packages/auth.git
-[submodule "packages/shared"]
-	path = packages/core
-	url = https://gitlab.leapsolutions.co.th/astral-plane/packages/shared.git
-[submodule "packages/ui"]
-	path = packages/ui
-	url = https://gitlab.leapsolutions.co.th/astral-plane/packages/ui.git

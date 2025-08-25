@@ -18,10 +18,7 @@ dependencies:
   flutter_form_builder: ^10.1.0
   form_builder_validators: ^11.2.0
   intl_utils: ^2.8.8
-  core:
-    git:
-      url: https://gitlab.leapsolutions.co.th/astral-plane/packages/shared
-      ref: main
+
 
 dev_dependencies:
   flutter_gen_runner: ^5.10.0
