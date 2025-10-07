@@ -30,6 +30,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/animations/
+    - assets/videos/
   fonts:
     - family: LineSeedSansTH
       fonts:

@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
   melos: ^6.3.2
   intl_utils: ^2.8.8
   core:
@@ -28,6 +29,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   build_runner: ^2.5.4
   hive_generator: ^2.0.1
+  flutter_launcher_icons: ^0.14.1
 
 flutter:
   uses-material-design: true
@@ -46,6 +48,17 @@ flutter_intl:
   arb_dir: lib/src/generated/localization
   output_dir: lib/src/generated
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/Logo_App.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  web:
+    generate: false
+  windows:
+    generate: false
+
 scripts:
   generator:
     build: flutter pub run build_runner build --delete-conflicting-outputs
@@ -60,9 +73,10 @@ scripts:
     flutter pub get
 
   # Aliases
-  gb: rps generator build
+  gb: rps generator build && cd packages/ui && dart run build_runner build --delete-conflicting-outputs
   gw: rps generator watch
   ml: rps merge-l10n
+  icon: dart run flutter_launcher_icons
 
 lint_staged:
   "lib/**.dart": dart format && dart fix --apply
