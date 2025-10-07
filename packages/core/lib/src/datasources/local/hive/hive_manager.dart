@@ -1,4 +1,4 @@
-import 'package:hive_flutter/adapters.dart';
+import 'package:core/core.dart';
 import 'package:core/src/models/token.dart';
 import 'package:core/src/utils/file_operation_util.dart';
 

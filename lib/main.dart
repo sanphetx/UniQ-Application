@@ -1,10 +1,10 @@
 import 'dart:async';
-import 'package:base_pos/src/app_module.dart';
 import 'package:core/core.dart';
 import 'package:core/src/models/token.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:uni_q_application/src/app_module.dart';
 
 void main() {
   runZonedGuarded<Future<void>>(

@@ -1,6 +1,5 @@
 import 'package:auth/auth.dart';
-import 'package:base_pos/src/presentation/router/route_name.dart';
-import 'package:base_pos/src/presentation/screens/home/home_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:core/core.dart';
 import 'package:go_router/go_router.dart';

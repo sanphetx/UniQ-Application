@@ -1,8 +1,8 @@
 import 'package:auth/auth.dart';
-import 'package:base_pos/src/presentation/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:core/core.dart' hide State;
 import 'package:ui/ui.dart';
+import 'package:uni_q_application/src/presentation/router/router.dart';
 
 final globalBlocProviders = <BlocProvider>[];
 
