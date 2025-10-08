@@ -1,3 +1,4 @@
+// lib/src/theme/tokens/colors/app_colors.dart
 import 'package:flutter/material.dart';
 import 'package:ui/src/theme/tokens/colors/color_palette.dart';
 
@@ -5,12 +6,7 @@ final class AppColors extends ThemeExtension<AppColors> {
   const AppColors({
     required this.staticBlack,
     required this.staticWhite,
-    // required this.primaryDark,
-    // required this.primaryDarker,
     required this.primaryBase,
-    // required this.primaryAlpha24,
-    // required this.primaryAlpha16,
-    // required this.primaryAlpha10,
     required this.bgStrong950,
     required this.bgSurface800,
     required this.bgSub300,
@@ -46,12 +42,7 @@ final class AppColors extends ThemeExtension<AppColors> {
 
   final Color staticBlack;
   final Color staticWhite;
-  // final Color primaryDark;
-  // final Color primaryDarker;
   final Color primaryBase;
-  // final Color primaryAlpha24;
-  // final Color primaryAlpha16;
-  // final Color primaryAlpha10;
   final Color bgStrong950;
   final Color bgSurface800;
   final Color bgSub300;
@@ -84,69 +75,57 @@ final class AppColors extends ThemeExtension<AppColors> {
   final Color successLight;
   final Color successLighter;
 
-  // static const _primaryDark = ColorPalette.neutral950;
-  // static const _primaryDarker = ColorPalette.neutral950;
-  static const _primaryBase = ColorPalette.neutral950;
-  // static const _primaryAlpha24 = ColorPalette.neutral950;
-  // static const _primaryAlpha16 = ColorPalette.neutral950;
-  // static const _primaryAlpha10 = ColorPalette.neutral950;
-
   static const light = AppColors(
     // Static colors
-    staticBlack: ColorPalette.neutral950,
-    staticWhite: ColorPalette.neutral0,
+    staticBlack: ColorPalette.black04,
+    staticWhite: ColorPalette.white01,
 
     // Brand colors
-    // primaryDark: _primaryDark,
-    // primaryDarker: _primaryDarker,
-    primaryBase: _primaryBase,
-    // primaryAlpha24: _primaryAlpha24,
-    // primaryAlpha16: _primaryAlpha16,
-    // primaryAlpha10: _primaryAlpha10,
+    primaryBase: ColorPalette.primaryPink,
 
     // Background colors
-    bgStrong950: ColorPalette.neutral950,
-    bgSurface800: ColorPalette.neutral800,
-    bgSub300: ColorPalette.neutral300,
-    bgSoft200: ColorPalette.neutral200,
-    bgWeak50: ColorPalette.neutral50,
-    bgWhite0: ColorPalette.neutral0,
+    bgStrong950: ColorPalette.black02,
+    bgSurface800: ColorPalette.black01,
+    bgSub300: ColorPalette.grey03,
+    bgSoft200: ColorPalette.grey02,
+    bgWeak50: ColorPalette.grey01,
+    bgWhite0: ColorPalette.white01,
 
     // Text colors
-    textStrong950: ColorPalette.neutral950,
-    textSub600: ColorPalette.neutral600,
-    textSoft400: ColorPalette.neutral400,
-    textDisabled300: ColorPalette.neutral300,
-    textWhite0: ColorPalette.neutral0,
+    textStrong950: ColorPalette.black02,
+    textSub600: ColorPalette.grey06,
+    textSoft400: ColorPalette.grey05,
+    textDisabled300: ColorPalette.grey03,
+    textWhite0: ColorPalette.white01,
 
     // Stroke colors
-    strokeStrong950: ColorPalette.neutral950,
-    strokeSub300: ColorPalette.neutral300,
-    strokeSoft200: ColorPalette.neutral200,
-    strokeWhite0: ColorPalette.neutral0,
+    strokeStrong950: ColorPalette.black01,
+    strokeSub300: ColorPalette.grey03,
+    strokeSoft200: ColorPalette.grey02,
+    strokeWhite0: ColorPalette.white01,
 
     // Informational colors
-    informationDark: ColorPalette.blue950,
-    informationBase: ColorPalette.blue500,
-    informationLight: ColorPalette.blue200,
-    informationLighter: ColorPalette.blue50,
+    informationDark: ColorPalette.blue06,
+    informationBase: ColorPalette.primaryBlue05,
+    informationLight: ColorPalette.blue03,
+    informationLighter: ColorPalette.blue01,
 
     // Warning colors
-    warningDark: ColorPalette.yellow950,
-    warningBase: ColorPalette.yellow500,
-    warningLight: ColorPalette.yellow200,
-    warningLighter: ColorPalette.yellow50,
+    warningDark: ColorPalette.yellow06,
+    warningBase: ColorPalette.primaryYellow05,
+    warningLight: ColorPalette.yellow03,
+    warningLighter: ColorPalette.yellow01,
 
     // Error colors
-    errorDark: ColorPalette.red950,
-    errorBase: ColorPalette.red500,
-    errorLight: ColorPalette.red200,
-    errorLighter: ColorPalette.red50,
+    errorDark: ColorPalette.red06,
+    errorBase: ColorPalette.primaryRed05,
+    errorLight: ColorPalette.red03,
+    errorLighter: ColorPalette.red01,
 
     // Success colors
-    successDark: ColorPalette.green950,
-    successBase: ColorPalette.green500,
-    successLight: ColorPalette.green200,
+    successDark: ColorPalette.green400,
+    successBase: ColorPalette.green300,
+    successLight: ColorPalette.green100,
     successLighter: ColorPalette.green50,
   );
 
@@ -154,12 +133,7 @@ final class AppColors extends ThemeExtension<AppColors> {
   AppColors copyWith({
     Color? staticBlack,
     Color? staticWhite,
-    Color? primaryDark,
-    Color? primaryDarker,
     Color? primaryBase,
-    Color? primaryAlpha24,
-    Color? primaryAlpha16,
-    Color? primaryAlpha10,
     Color? bgStrong950,
     Color? bgSurface800,
     Color? bgSub300,
@@ -195,12 +169,7 @@ final class AppColors extends ThemeExtension<AppColors> {
     return AppColors(
       staticBlack: staticBlack ?? this.staticBlack,
       staticWhite: staticWhite ?? this.staticWhite,
-      // primaryDark: primaryDark ?? this.primaryDark,
-      // primaryDarker: primaryDarker ?? this.primaryDarker,
       primaryBase: primaryBase ?? this.primaryBase,
-      // primaryAlpha24: primaryAlpha24 ?? this.primaryAlpha24,
-      // primaryAlpha16: primaryAlpha16 ?? this.primaryAlpha16,
-      // primaryAlpha10: primaryAlpha10 ?? this.primaryAlpha10,
       bgStrong950: bgStrong950 ?? this.bgStrong950,
       bgSurface800: bgSurface800 ?? this.bgSurface800,
       bgSub300: bgSub300 ?? this.bgSub300,
@@ -243,12 +212,7 @@ final class AppColors extends ThemeExtension<AppColors> {
     return AppColors(
       staticBlack: Color.lerp(staticBlack, other.staticBlack, t)!,
       staticWhite: Color.lerp(staticWhite, other.staticWhite, t)!,
-      // primaryDark: Color.lerp(primaryDark, other.primaryDark, t)!,
-      // primaryDarker: Color.lerp(primaryDarker, other.primaryDarker, t)!,
       primaryBase: Color.lerp(primaryBase, other.primaryBase, t)!,
-      // primaryAlpha24: Color.lerp(primaryAlpha24, other.primaryAlpha24, t)!,
-      // primaryAlpha16: Color.lerp(primaryAlpha16, other.primaryAlpha16, t)!,
-      // primaryAlpha10: Color.lerp(primaryAlpha10, other.primaryAlpha10, t)!,
       bgStrong950: Color.lerp(bgStrong950, other.bgStrong950, t)!,
       bgSurface800: Color.lerp(bgSurface800, other.bgSurface800, t)!,
       bgSub300: Color.lerp(bgSub300, other.bgSub300, t)!,
@@ -266,16 +230,8 @@ final class AppColors extends ThemeExtension<AppColors> {
       strokeWhite0: Color.lerp(strokeWhite0, other.strokeWhite0, t)!,
       informationDark: Color.lerp(informationDark, other.informationDark, t)!,
       informationBase: Color.lerp(informationBase, other.informationBase, t)!,
-      informationLight: Color.lerp(
-        informationLight,
-        other.informationLight,
-        t,
-      )!,
-      informationLighter: Color.lerp(
-        informationLighter,
-        other.informationLighter,
-        t,
-      )!,
+      informationLight: Color.lerp(informationLight, other.informationLight, t)!,
+      informationLighter: Color.lerp(informationLighter, other.informationLighter, t)!,
       warningDark: Color.lerp(warningDark, other.warningDark, t)!,
       warningBase: Color.lerp(warningBase, other.warningBase, t)!,
       warningLight: Color.lerp(warningLight, other.warningLight, t)!,

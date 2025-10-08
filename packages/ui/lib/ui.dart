@@ -1,4 +1,5 @@
 export './src/libs.dart';
+export 'package:ui/src/generated/assets.gen.dart';
 export 'package:ui/src/generated/fonts.gen.dart';
 export 'package:ui/src/generated/l10n.dart';
 export 'package:ui/src/theme/theme.dart';
