@@ -99,7 +99,7 @@ class _AppTextFieldState extends State<AppTextField> {
         ? context.appColors.errorBase
         : _isFocused
         ? context.appColors.primaryBase
-        : context.appColors.strokeSub300;
+        : context.appColors.textDisabled300;
 
     final effectiveBackgroundColor = widget.disabled
         ? context.appColors.bgSoft200
@@ -125,16 +125,12 @@ class _AppTextFieldState extends State<AppTextField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: EdgeInsets.symmetric(horizontal: context.appSpacing.x3s),
+          height: 50,
+          padding: EdgeInsets.symmetric(horizontal: 16),
           decoration: BoxDecoration(
             color: effectiveBackgroundColor,
-            border: Border.all(
-              color: effectiveBorderColor,
-              width: context.appBorders.defaultBorderWidth,
-            ),
-            borderRadius: BorderRadius.circular(
-              context.appBorders.borderRadiusMd,
-            ),
+            border: Border.all(color: effectiveBorderColor, width: context.appBorders.defaultBorderWidth),
+            borderRadius: BorderRadius.circular(25),
             boxShadow: effectiveBoxShadow,
           ),
           child: TextField(
@@ -148,27 +144,21 @@ class _AppTextFieldState extends State<AppTextField> {
             obscureText: _textObscure,
             scrollPadding: widget.scrollPadding ?? EdgeInsets.zero,
             maxLength: widget.maxLength,
-            textCapitalization:
-                widget.textCapitalization ?? TextCapitalization.none,
+            textCapitalization: widget.textCapitalization ?? TextCapitalization.none,
             textInputAction: widget.textInputAction,
             keyboardType: widget.keyboardType,
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: widget.hintText,
-              labelText: widget.labelText,
-              floatingLabelBehavior: FloatingLabelBehavior.auto,
-              floatingLabelStyle: context.appTypography.regular.textDefault
-                  .copyWith(color: effectiveFloatingLabelTextColor),
-              labelStyle: context.appTypography.regular.textDefault.copyWith(
-                color: context.appColors.textSoft400,
-              ),
+              labelText: widget.labelText.isEmpty ? null : widget.labelText,
+              floatingLabelBehavior: FloatingLabelBehavior.never,
+              labelStyle: context.appTypography.regular.textDefault.copyWith(color: context.appColors.textSoft400),
               hintStyle: context.appTypography.regular.textDefault.copyWith(
                 color: context.appColors.textSoft400,
+                fontSize: 16,
               ),
-              suffixIconConstraints: const BoxConstraints(
-                minHeight: 0,
-                minWidth: 0,
-              ),
+              contentPadding: EdgeInsets.symmetric(vertical: 15),
+              suffixIconConstraints: const BoxConstraints(minHeight: 0, minWidth: 0),
               suffixIcon: widget.textObscure
                   ? GestureDetector(
                       onTap: () {
@@ -188,10 +178,7 @@ class _AppTextFieldState extends State<AppTextField> {
                   : null,
             ),
             cursorColor: context.appColors.primaryBase,
-            style: context.appTypography.regular.textDefault.copyWith(
-              color: effectiveTextColor,
-              height: 1.h,
-            ),
+            style: context.appTypography.regular.textDefault.copyWith(color: effectiveTextColor, height: 1.h),
             onTapOutside: (_) => _focusNode.unfocus(),
             onTap: widget.onTap,
             onChanged: widget.onChanged,
