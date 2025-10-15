@@ -14,11 +14,15 @@ dependencies:
   flutter_screenutil: ^5.9.3
   remixicon: ^1.4.1
   flutter_gen: ^5.10.0
-  flutter_bloc: ^9.1.1
+  flutter_bloc: ^8.1.3
   flutter_form_builder: ^10.1.0
   form_builder_validators: ^11.2.0
   go_router: ^16.2.0
   intl_utils: ^2.8.8
+  google_fonts: ^6.1.0
+  equatable: ^2.0.5
+  flutter_svg: ^2.0.10+1
+  lottie: ^3.1.2
 
 
 dev_dependencies:
@@ -36,12 +40,20 @@ flutter:
     - assets/animations/
     - assets/videos/
   fonts:
-    - family: LineSeedSansTH
+    - family: SukhumvitSet
       fonts:
-        - asset: ./assets/fonts/LINESeedSansTH_A_Rg.ttf
+        - asset: ./assets/fonts/SukhumvitSet-Thin.ttf
+          weight: 100
+        - asset: ./assets/fonts/SukhumvitSet-Light.ttf
+          weight: 300
+        - asset: ./assets/fonts/SukhumvitSet-Text.ttf
           weight: 400
-        - asset: ./assets/fonts/LINESeedSansTH_A_Bd.ttf
+        - asset: ./assets/fonts/SukhumvitSet-Medium.ttf
           weight: 500
+        - asset: ./assets/fonts/SukhumvitSet-SemiBold.ttf
+          weight: 600
+        - asset: ./assets/fonts/SukhumvitSet-Bold.ttf
+          weight: 700
 
 flutter_gen:
   output: ./lib/src/generated

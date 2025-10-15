@@ -46,9 +46,7 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: !disabled ? (onTap ?? () {}) : null,
-      child: fullWidth
-          ? _buildContainer(context)
-          : IntrinsicWidth(child: _buildContainer(context)),
+      child: fullWidth ? _buildContainer(context) : IntrinsicWidth(child: _buildContainer(context)),
     );
   }
 
@@ -59,8 +57,7 @@ class AppButton extends StatelessWidget {
       AppButtonSize.md => context.appSpacing.lg,
     };
 
-    final double effectiveBorderWidth =
-        borderWidth ?? context.appBorders.defaultBorderWidth;
+    final double effectiveBorderWidth = borderWidth ?? context.appBorders.defaultBorderWidth;
 
     final List<BoxShadow> effectiveShadow = switch (mode) {
       AppButtonMode.filled => const [],
@@ -112,24 +109,17 @@ class AppButton extends StatelessWidget {
 
     return Container(
       height: effectiveHeight,
-      padding:
-          padding ?? EdgeInsets.symmetric(horizontal: context.appSpacing.x2s),
+      padding: padding ?? EdgeInsets.symmetric(horizontal: context.appSpacing.x2s),
       decoration: BoxDecoration(
         color: effectiveBackgroundColor,
         boxShadow: effectiveShadow,
-        borderRadius: BorderRadius.circular(context.appBorders.borderRadiusMd),
-        border: Border.all(
-          color: effectiveBorderColor,
-          width: effectiveBorderWidth,
-        ),
+        borderRadius: BorderRadius.circular(25),
+        border: Border.all(color: effectiveBorderColor, width: effectiveBorderWidth),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          if (prefix != null) ...[
-            prefix!,
-            SizedBox(width: context.appSpacing.x4s),
-          ],
+          if (prefix != null) ...[prefix!, SizedBox(width: context.appSpacing.x4s)],
           Align(
             alignment: Alignment.center,
             child: Text(
@@ -141,10 +131,7 @@ class AppButton extends StatelessWidget {
               ),
             ),
           ),
-          if (suffix != null) ...[
-            SizedBox(width: context.appSpacing.x4s),
-            suffix!,
-          ],
+          if (suffix != null) ...[SizedBox(width: context.appSpacing.x4s), suffix!],
         ],
       ),
     );
